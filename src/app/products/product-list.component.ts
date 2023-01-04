@@ -5,8 +5,10 @@ import { Component } from "@angular/core";
   templateUrl: "./product-list.component.html",
 })
 export class ProductListComponent {
-  pageTitle: string = "Product List";
-  filterLabel: string = "Filter by:";
+  pageTitle = "Product List";
+  filterLabel = "Filter by:";
+  imageWidth = 50;
+  imageMargin = 2;
   products: any[] = [
     {
       productId: 1,
