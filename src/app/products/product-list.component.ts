@@ -1,11 +1,13 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+
 import { IProduct } from "./product";
 
 @Component({
   selector: "pm-products",
   templateUrl: "./product-list.component.html",
+  styleUrls: ["./product-list.component.css"],
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
   pageTitle = "Product List";
   filterLabel = "Filter by:";
   imageWidth = 50;
@@ -66,5 +68,8 @@ export class ProductListComponent {
   ];
   toggleImage(): void {
     this.showImage = !this.showImage;
+  }
+  ngOnInit(): void {
+    console.log("In onInit");
   }
 }
